@@ -39,15 +39,12 @@ const layers = [
     document.getElementById("layer-3"),
 ];
 
-const STAR_COUNTS = [80, 120, 160]; // depth density
+const STAR_COUNTS = [80, 120, 160]; 
 
 function rand(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-/* =========================
-   CREATE STAR LAYERS
-========================= */
 layers.forEach((layer, index) => {
     for (let i = 0; i < STAR_COUNTS[index]; i++) {
         const star = document.createElement("div");
@@ -64,7 +61,6 @@ layers.forEach((layer, index) => {
         const baseOpacity = rand(0.2, 0.9);
         star.style.opacity = baseOpacity;
 
-        // flicker
         const speed = rand(800, 5000);
 
         setInterval(() => {
@@ -75,9 +71,6 @@ layers.forEach((layer, index) => {
     }
 });
 
-/* =========================
-   PARALLAX EFFECT
-========================= */
 document.addEventListener("mousemove", (e) => {
     const x = (e.clientX / window.innerWidth - 0.5) * 20;
     const y = (e.clientY / window.innerHeight - 0.5) * 20;
@@ -88,9 +81,6 @@ document.addEventListener("mousemove", (e) => {
     });
 });
 
-/* =========================
-   SHOOTING STARS
-========================= */
 function createShootingStar() {
     const star = document.createElement("div");
     star.classList.add("shooting-star");
@@ -105,7 +95,6 @@ function createShootingStar() {
     }, 1200);
 }
 
-// random intervals (not predictable)
 setInterval(() => {
     if (Math.random() > 0.6) {
         createShootingStar();

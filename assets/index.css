@@ -20,8 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-/* NAV */
-
 .nav {
   position: fixed;
   top: 0;
@@ -49,7 +47,6 @@ body {
   letter-spacing: 0.25rem;
 }
 
-/* scanning line effect */
 .nav::after {
   content: "";
   position: absolute;
@@ -80,10 +77,9 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 1.5rem;   /* tighter horizontal spacing */
+  padding: 0 1.5rem;
 }
 
-/* logo = ship identifier */
 .nav-logo {
   color: var(--text);
   text-decoration: none;
@@ -105,11 +101,10 @@ body {
 
 .nav-list {
   display: flex;
-  gap: 1.8rem;   /* was 2.5rem */
+  gap: 1.8rem;
   list-style: none;
 }
 
-/* links = “signal nodes” */
 .nav-list a {
   position: relative;
 
@@ -121,7 +116,6 @@ body {
   transition: 0.25s ease;
 }
 
-/* hover glow lock-on */
 .nav-list a::before {
   content: "";
   position: absolute;
@@ -146,7 +140,6 @@ body {
   width: 100%;
 }
 
-/* optional: slight floating feel */
 .nav {
   animation: navFloat 8s ease-in-out infinite;
 }
@@ -156,7 +149,6 @@ body {
   50% { transform: translateY(1px); }
 }
 
-/* HERO */
 .hero {
   height: calc(100vh - 53px);
   display: flex;
@@ -168,7 +160,6 @@ body {
   overflow: hidden;
 }
 
-/* star background layer */
 .stars {
   position: absolute;
   inset: 0;
@@ -210,7 +201,6 @@ body {
   color: rgba(230,240,255,0.6);
 }
 
-/* BUTTONS */
 .hero-buttons {
   margin-top: 2rem;
   display: flex;
@@ -236,7 +226,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* SECTIONS */
 .section {
   padding: 5rem 2rem;
   max-width: 70vw;
@@ -255,7 +244,6 @@ body {
   text-shadow: 0 0 10px rgba(106,169,255,0.3);
 }
 
-/* PROJECT CARDS */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -276,7 +264,6 @@ body {
   box-shadow: 0 0 20px rgba(106,169,255,0.1);
 }
 
-/* FOOTER */
 .footer {
   text-align: center;
   padding: 2rem;
@@ -284,23 +271,21 @@ body {
 }
 
 .starfield {
-  position: fixed;   /* KEY CHANGE */
+  position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
 
   overflow: hidden;
-  z-index: -1;       /* pushes it behind everything */
-  pointer-events: none; /* ensures clicks go through */
+  z-index: -1;
+  pointer-events: none; 
 }
 
-/* layers stay full screen */
 .star-layer {
   position: absolute;
   inset: 0;
 }
 
-/* star base */
 .star {
   position: absolute;
   background: white;
@@ -315,7 +300,6 @@ body {
   opacity: 1;
 }
 
-/* shooting star */
 .shooting-star {
   position: absolute;
   width: 2px;
@@ -363,7 +347,6 @@ body {
   color: var(--muted);
 }
 
-/* GRID = mission terminal layout */
 .mission-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -381,7 +364,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  min-height: 220px; /* optional but helps consistency */
+  min-height: 220px;
 }
 
 .mission-card h2 {
@@ -400,7 +383,6 @@ body {
   box-shadow: 0 0 25px rgba(106,169,255,0.15);
 }
 
-/* top bar */
 .mission-header {
   display: flex;
   justify-content: space-between;
@@ -419,7 +401,6 @@ body {
   border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* status colors */
 .status.active {
   color: #6aa9ff;
   border-color: #6aa9ff;
@@ -441,7 +422,6 @@ body {
   justify-content: space-between;
 }
 
-/* PAGE HEADER */
 .page-header {
   text-align: center;
   padding: 7rem 2rem 2rem;
@@ -456,7 +436,6 @@ body {
   color: var(--muted);
 }
 
-/* PROFILE LAYOUT */
 .profile-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -473,12 +452,10 @@ body {
   padding: 2rem;
 }
 
-/* labels */
 .label {
   color: rgba(106,169,255,0.8);
 }
 
-/* SKILLS GRID */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
